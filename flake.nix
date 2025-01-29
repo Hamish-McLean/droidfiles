@@ -16,12 +16,13 @@
     };
   };
 
-  outputs = {
-    nixpkgs,
-    nixpkgs-unstable,
-    nix-on-droid,
-    ...
-  }@inputs:
+  outputs =
+    {
+      nixpkgs,
+      nixpkgs-unstable,
+      nix-on-droid,
+      ...
+    }@inputs:
     let
       system = "aarch64-linux";
       hostname = "localhost";
@@ -39,7 +40,12 @@
         overlays = [ nix-on-droid.overlays.default ];
       };
       extraSpecialArgs = {
-        inherit inputs system hostname username;
+        inherit
+          inputs
+          system
+          hostname
+          username
+          ;
       };
       modules = [
         ./nix-on-droid.nix
