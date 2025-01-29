@@ -19,7 +19,7 @@
   #cat-colours.enable = true;
 
   terminal = {
-    font = ~/.local/state/nix/profiles/home-manager/home-path/share/fonts/truetype/NerdFonts/JetBrainsMonoNerdFont-Regular.ttf;
+    font = "~/.local/state/nix/profiles/home-manager/home-path/share/fonts/truetype/NerdFonts/JetBrainsMonoNerdFont-Regular.ttf";
     colors = {
       background = "#1e1e2e";
       foreground = "#cdd6f4"; # Main text colour
